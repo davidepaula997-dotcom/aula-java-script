@@ -33,17 +33,40 @@
 
     <script>
 
-        let a = Number(window.prompt("Digite o seu primeiro nome"))
-        let b = Number(prompt("Digite o seu segundo nome"))
-        let c = Number(prompt("Digite o seu terceiro nome"))
+        // let a = Number(window.prompt("Digite o seu primeiro nome"))
+        // let b = Number(prompt("Digite o seu segundo nome"))
+        // let c = Number(prompt("Digite o seu terceiro nome"))
 
-        let soma = a + b + c;
-        let media = soma / 3;
+        // let soma = a + b + c;
+        // let media = soma / 3;
 
-        console.log(soma);
-        console.log(media);
+        // console.log(soma);
+        // console.log(media);
 
-        alert("A soma é: " + soma + "\na média é : " + media);
+        // alert("A soma é: " + soma + "\na média é : " + media);
+
+
+
+        // function medía(soma,numero) {
+        //     return soma/numeros;
+        // }
+        // function ehdivisivel(primeironumero, segundonumero){
+        // if(primeironumero%segundonumero==0) return true
+        // else return false    
+        // }
+        // alert(ehdivisivel(52,2))
+
+
+    let quantasnotas=Number(prompt("Quantas notas você quer digitar?")), soma=0
+        for (let index = 1; index <= quantasnotas; index++) {
+            let numerodigitado =Number(prompt("qual a "+index+"nota?"))
+            soma = soma + numerodigitado
+        }
+        let media = soma/quantasnotas
+        alert("Sua média é: "+ media)
+
+        
+
     </script>
 
 
