@@ -8,31 +8,72 @@
     <style>
         #minhadiv {
             background-color: rgb(54, 35, 35);
-            height: 300px;
-            width: 200px;
+           min-height:300px;
+            width: 300px;
         }
     </style>
 </head>
 
 <body>
-    <div id="minhadiv"></div>
-    <input type="text" name="" id="campo-texto">
-    <button id="meu-botao">Mudar Texto</button>
-    <script>
+    <div id="minhadiv">
+        <form action="#" method="post">
+            <input type="text" id="campo-texto">
+            <button id="meu-botao" type="submit">Mudar Texto</button>
+        </form>
+    </div>
+     
+   <script>
         let divrosa = document.querySelector("#minhadiv");
         console.log(divrosa);
         let textoinput = document.querySelector("#campo-texto")
         console.log(divrosa);
 
-        minhafuncao = function mudartexto() {
+        minhafuncao = function mudartexto(evento) {
             // divrosa.textContent = "MEU TEXTO";
+            evento.preventDefault();
+            let novadiv = document.createElement("div")
+            novadiv.textContent = textoinput.value;
+            novadiv.classList.add("item-lista")
+            novadiv.style.marginleft="30px";
+            divrosa.append(novadiv)
             divrosa.textContent = textoinput.value;
         }
 
         let botao = document.querySelector("#meu-botao")
         console.log(botao);
         botao.addEventListener("click", minhafuncao)
-
+    
+    
+    let alunos =[
+{
+        Nome: "Matheus",
+        idade: 33,
+        curso: "Fullcycle",
+        turno: "Tarde",
+        data_de_inicio:"09/09/2026"
+    },
+      {
+        Nome: "Davi",
+        idade: 33,
+        curso: "Fullstack",
+        turno: "Tarde",
+        data_de_inicio:"09/09/2026"
+    },
+      {
+        Nome:"Gomes",
+        idade: 33,
+        curso: "IA",
+        turno: "Tarde",
+        data_de_inicio:"09/09/2026"
+    },
+ ]
+        console.log(alunos);
+          
+        // let listartodososnomes = function filtrarosnomes(aluno){
+        //     return aluno.nome
+        // }
+        // alert(alunos.map(listartodososnomes))
+    alert(alunos.map((aluno) => aluno.nome))
 
     </script>
 </body>
